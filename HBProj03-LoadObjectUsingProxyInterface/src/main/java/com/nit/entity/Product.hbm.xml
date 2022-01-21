@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.nit.entity.Product" table="Product" lazy="false" proxy="com.nit.entity.IProduct">
+
+		<!-- OR Mapping -->
+		<id name="pid">
+			<generator class="increment" />  <!-- Singular ID field cfg -->
+		</id>
+		<property name="pname" />
+		<property name="price" />
+		<property name="qty" />
+	</class>
+</hibernate-mapping>
