@@ -25,7 +25,7 @@ public class SaveOrUpdateObjectTest {
 		Session ses = factory.openSession();
 
 		Transaction tx = null;
-		try(factory;ses){  //java9
+		try(factory;ses){  //java9 TWR
 			//Begin Tx
 			tx = ses.beginTransaction();
 
