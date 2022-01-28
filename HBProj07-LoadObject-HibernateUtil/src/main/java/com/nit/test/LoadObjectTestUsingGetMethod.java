@@ -15,7 +15,7 @@ public class LoadObjectTestUsingGetMethod {
 		SessionFactory factory = HibernateUtil.getSessionFactory();
 		//get Session object
 		Session ses = HibernateUtil.getSession();
-		try(factory;ses){  //java9
+		try(factory;ses){  //java9 TWR
 			//Load object
 			Product prod = ses.get(Product.class, 1013);
 			if(prod==null)
