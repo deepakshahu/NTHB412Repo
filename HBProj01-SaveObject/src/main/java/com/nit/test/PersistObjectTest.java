@@ -12,7 +12,7 @@ public class PersistObjectTest {
 
 	public static void main(String[] args) {
 		
-		//BootStrap / Activate the Hibernate
+		//BootStrap/Activate the Hibernate
 		Configuration cfg = new Configuration();
 		
 		//Specify the Hibernate configuration file name and location
