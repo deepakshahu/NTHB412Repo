@@ -23,7 +23,7 @@ public class LoadObjectTestUsingGetMethod {
 		//Create Session object
 		Session ses = factory.openSession();
 
-		try(factory;ses){  //java9
+		try(factory;ses){  //java9 TWR
 			//Load object
 			Product prod = ses.get(Product.class, 1013);
 			System.out.println(prod.getClass());
@@ -31,9 +31,9 @@ public class LoadObjectTestUsingGetMethod {
 				System.out.println("Product not found");
 			else
 				System.out.println(prod);
-		}
+		}//try
 		catch(HibernateException he) {
 			he.printStackTrace();
-		}
+		}//catch
 	}//main
 }//class
