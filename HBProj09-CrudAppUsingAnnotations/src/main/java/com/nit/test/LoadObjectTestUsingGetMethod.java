@@ -16,7 +16,7 @@ public class LoadObjectTestUsingGetMethod {
 		Session ses = HibernateUtil.getSession();
 		try(factory;ses){
 			//Load object
-			Movie movie = ses.get(Movie.class, 1001);
+			Movie movie = ses.get(Movie.class, 1004);
 			if(movie==null)
 				System.out.println("Movie not found");
 			else

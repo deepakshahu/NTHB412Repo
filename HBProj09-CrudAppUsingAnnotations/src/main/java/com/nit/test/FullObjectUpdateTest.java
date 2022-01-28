@@ -24,7 +24,7 @@ public class FullObjectUpdateTest {
 			movie.setMid(1001);  //must be existing id
 			movie.setMname("Pushpa: The Rise");  //new value
 			movie.setHeroName("Allu Arjun");  //new value
-			movie.setBudget(800.0f);  //new value
+			movie.setBudget(900.0f);  //new value
 			//Instruction to update object
 			ses.update(movie);
 			tx.commit();

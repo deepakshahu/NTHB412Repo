@@ -20,7 +20,11 @@ public class SaveObjectTest {
 			//Begin transaction
 			tx = ses.beginTransaction();
 			//Prepare entity object
-			Movie movie = new Movie(1003,"Antim","Salman Khan", 600.0f);
+			Movie movie = new Movie();
+			movie.setMid(1005);
+			movie.setMname("Spider-Man");
+			movie.setHeroName("Peter");
+			movie.setBudget(480.4f);
 			//Save object
 			ses.save(movie);
 			tx.commit();

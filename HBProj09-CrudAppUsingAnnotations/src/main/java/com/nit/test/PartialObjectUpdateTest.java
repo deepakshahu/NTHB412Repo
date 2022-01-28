@@ -25,13 +25,10 @@ public class PartialObjectUpdateTest {
 			else {
 				//Begin Transaction
 				tx = ses.beginTransaction();
-
 				//modify the object partially
 				movie.setBudget(4000.0f);  //new value
-
 				//instruction to update object
 				ses.update(movie);
-
 				//commit the tx
 				tx.commit();
 				System.out.println("Partial object is updated");

@@ -17,7 +17,9 @@ public class LoadObjectTestUsingLoadMethod {
 		try(factory;ses){
 			//Load object
 			Movie movie = ses.load(Movie.class, 1001);
-			System.out.println("Movie is :: "+movie.getMid()+" "+movie.getMname()+" "+movie.getHeroName()+" "+movie.getBudget());
+			System.out.println(movie.getClass()+" <---> "+movie.getClass().getSuperclass());
+			//System.out.println("Movie is :: "+movie.getMid()+" "+movie.getMname()+" "+movie.getHeroName()+" "+movie.getBudget());
+			//System.out.println(movie);
 		}
 		catch(HibernateException he) {
 			he.printStackTrace();

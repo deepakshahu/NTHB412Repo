@@ -4,9 +4,11 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
+import org.hibernate.annotations.Proxy;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -16,10 +18,10 @@ import lombok.NoArgsConstructor;
 @Entity
 @Table(name="MOVIE_INFO")
 @AllArgsConstructor
-@NoArgsConstructor
 @DynamicInsert(value = true)
 @DynamicUpdate(value = true)
-public class Movie {
+@Proxy(lazy = true)
+public final class Movie {
 	@Id  //Singular id field
 	@Column(name="MID")  //Mapping with column
 	private Integer mid;
@@ -28,5 +30,10 @@ public class Movie {
 	@Column(name="HERONAME", length=50)  //Mapping with column
 	private String heroName;
 	@Column(name="BUDGET")  //Mapping with column
+	//@Transient
 	private Float budget;
+	
+	public Movie() {
+		System.out.println("Movie :: 0-param constructor :: "+this.getClass());
+	}
 }
