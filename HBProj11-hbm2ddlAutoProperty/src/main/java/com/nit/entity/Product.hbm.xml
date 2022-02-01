@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.nit.entity.Product" table="PRODUCT_INFO">
+		<!-- O-R Mapping -->
+		<id name="pid" column="PID">
+			<generator class="increment" /> <!-- Singular ID Field cfg -->
+		</id>
+		<property name="pname" column="PNAME" length="15" not-null="true" unique="true"/>
+		<property name="price" column="PRICE"/>
+		<property name="qty" column="QTY"/>
+		<!-- <property name="status" column="STATUS" length="10"/> -->
+	</class>
+</hibernate-mapping>
