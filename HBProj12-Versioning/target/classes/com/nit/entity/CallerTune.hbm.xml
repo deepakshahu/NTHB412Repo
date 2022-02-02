@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.nit.entity.CallerTune" table="CALLERTUNE">
+		<!-- O-R Mapping -->
+		<id name="tuneId" column="TUNEID">
+			<generator class="increment" /> <!-- Singular ID Field cfg -->
+		</id>
+		<version name="updationCount" column="UPDATIONCOUNT" /> <!-- version tag should be place after id tag -->
+		<property name="tuneName" column="TUNENAME" length="20" />
+		<property name="movieName" column="MOVIENAME" length="20" />
+	</class>
+</hibernate-mapping>
