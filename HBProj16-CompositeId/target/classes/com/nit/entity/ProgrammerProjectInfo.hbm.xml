@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.nit.entity.ProgrammerProjectInfo">
+		<!-- O-R Mapping -->
+		<composite-id name="id"
+			class="com.nit.entity.PrgmrProjId">  <!-- Composite ID Field cfg -->
+			<key-property name="prgmrId" />
+			<key-property name="projId" />
+		</composite-id>
+
+		<property name="prgmrName" length="20" />
+		<property name="projName" length="20" />
+		<property name="salary" />
+		<property name="budget" />
+	</class>
+</hibernate-mapping>
