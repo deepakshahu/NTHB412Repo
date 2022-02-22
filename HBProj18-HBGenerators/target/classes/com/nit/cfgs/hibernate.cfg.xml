@@ -6,13 +6,13 @@
 	<session-factory>
 		<!-- JDBC Properties -->
 		<!-- <property name="connection.driver_class">oracle.jdbc.driver.OracleDriver</property> -->
-		<!-- <property name="connection.url">jdbc:oracle:thin:@localhost:1521:xe</property>
+		<property name="connection.url">jdbc:oracle:thin:@localhost:1521:xe</property>
 		<property name="connection.username">system</property>
-		<property name="connection.password">manager</property> -->
+		<property name="connection.password">manager</property>
 		
-		<property name="connection.url">jdbc:mysql:///nthb412db</property>
+		<!-- <property name="connection.url">jdbc:mysql:///nthb412db</property>
 		<property name="connection.username">root</property>
-		<property name="connection.password">root</property>
+		<property name="connection.password">root</property> -->
 
 		<!-- Hibernate Properties -->
 		<property name="show_sql">true</property>

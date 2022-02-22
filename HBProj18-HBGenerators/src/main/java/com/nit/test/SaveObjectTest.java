@@ -25,9 +25,9 @@ public class SaveObjectTest {
 
 			//Prepare object for entity class
 			Product prod = new Product();
-			prod.setPname("Chair");
-			prod.setPrice(500.5f);
-			prod.setQty(12.0f);
+			prod.setPname("Pen");
+			prod.setPrice(22.0f);
+			prod.setQty(1.0f);
 			//instruction to save object
 			Integer idVal = (Integer) ses.save(prod);
 			System.out.println("The generated id value is :: "+idVal);

@@ -14,10 +14,31 @@
 			<!-- <generator class="sequence">
 				<param name="sequence_name">PRODID_SEQ</param>
 			</generator> -->
-			<generator class="sequence">
+			<!-- <generator class="sequence">
 				<param name="sequence_name">HB_PID_SEQ</param>
 				<param name="initial_value">1000</param>
 				<param name="increment_size">10</param>
+			</generator> -->
+			<!-- <generator class="seqhilo">
+				<param name="sequence">PRODID_SEQ</param>
+				<param name="max_lo">5</param>
+			</generator> -->
+			<!-- <generator class="seqhilo">
+				<param name="max_lo">5</param>
+			</generator> -->
+			<!-- <generator class="seqhilo"/> -->
+			<!-- <generator class="native"/> -->
+			<!-- <generator class="native">
+				<param name="sequence_name">HB_PRODID_SEQ</param>
+			</generator> -->
+			<!-- <generator class="native">
+				<param name="sequence_name">HB1_PRODID_SEQ1</param>
+				<param name="initial_value">100</param>
+				<param name="increment_size">2</param>
+			</generator> -->
+			<!-- <generator class="native"/> -->
+			<generator class="select">
+				<param name="key">pname</param>
 			</generator>
 		</id>
 		<property name="pname" column="PNAME" />
