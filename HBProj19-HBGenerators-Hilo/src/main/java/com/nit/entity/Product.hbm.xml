@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.nit.entity.Product" table="Product">
+		<!-- OR Mapping -->
+		<id name="pid" column="PID">
+			<!-- <generator class="assigned" /> -->
+			<!-- <generator class="increment" /> -->
+			<!-- <generator class="identity" /> -->
+			<!-- <generator class="sequence" /> -->
+			<!-- <generator class="sequence">
+				<param name="sequence_name">PRODID_SEQ</param>
+			</generator> -->
+			<!-- <generator class="sequence">
+				<param name="sequence_name">HB_PID_SEQ</param>
+				<param name="initial_value">1000</param>
+				<param name="increment_size">10</param>
+			</generator> -->
+			<generator class="hilo">
+				<param name="table">HI_TABLE</param>
+				<param name="column">HI_VAL</param>
+				<param name="max_lo">5</param>
+			</generator>
+			<!-- <generator class="hilo">
+				<param name="max_lo">5</param>
+			</generator> -->
+			<!-- <generator class="hilo"/> -->
+		</id>
+		<property name="pname" column="PNAME" />
+		<property name="price" column="PRICE" />
+		<property name="qty" column="QTY" />
+	</class>
+</hibernate-mapping>
