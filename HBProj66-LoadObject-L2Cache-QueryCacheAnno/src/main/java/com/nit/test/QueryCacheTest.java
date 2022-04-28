@@ -33,5 +33,6 @@ public class QueryCacheTest {
 		catch(HibernateException he) {
 			he.printStackTrace();
 		}//catch
+		
 	}//main
 }//class
